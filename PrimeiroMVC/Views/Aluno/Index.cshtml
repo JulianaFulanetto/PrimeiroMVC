@@ -1,0 +1,31 @@
+﻿@model IEnumerable<PrimeiroMVC.Models.Aluno>
+@{
+    ViewData["Title"] = "Listar Alunos";
+}
+<h1>Listar Aluno</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Matricula</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!--Laço de repetição foreach para listar todos o elementos da lista de aluno-->
+        @foreach (var aluno in Model)
+        {
+            <tr>
+                <td>@aluno.AlunoId</td>
+                <td>@aluno.Nome</td>
+                <td>@aluno.Email</td>
+                <td>@aluno.RM</td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
